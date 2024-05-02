@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Pod request access landing page solution
 
-## Getting Started
+This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
+- Receive an error message when the form is submitted if:
+  - The `Email address` field is empty should show "Oops! Please add your email"
+  - The email is not formatted correctly should show "Oops! Please check your email"
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [URL](https://www.frontendmentor.io/solutions/pod-request-access-landing-page-using-parcel-and-sass-B1NmrC8Bc)
+- Live Site URL: [URL](https://miguelzaga.github.io/pod-request-access-landing-page/)
+
+## My process
+
+### Built with
+
+- Parcel (Though, I could not deploy it)
+- Sass
+- Semantic HTML5 markup
+- Flexbox
+- Mobile-first workflow
+
+### What I learned
+
+This is my first time using Parcel. I was going to use Webpack but it needs more configuration. I am glad that Parcel worked and that it easy to use with Sass (this is my second project using it). I watched some videos and I will try to include Sass nesting and a better structure. I also failed to deploy with parcel and gh-pages. I think I might try gulp next time.
+
+#### JS
+It is a simple handler function but I like it.
+```
+```js
+  const handler = function (e) {
+    e.preventDefault();
+    if (isEmailValid(email.value)) {
+      hideError();
+      window.open("https://www.frontendmentor.io/profile/miguelzaga", "_blank");
+    } else {
+      showError();
+    }
+  };
+
+  form.addEventListener("submit", handler);
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Continued development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I need to learn more about package managers and build tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Useful resources
 
-## Learn More
+- [The Parcel Bundler](https://www.youtube.com/watch?v=OK6akGZCC88&list=PLoskGHof_0kHVvCWunMv1daUd-n7SIcOZ&index=1) - I organized the project based in this video. I am just getting my feet wet with Parcel.
+- [When to use margin vs padding](https://stackoverflow.com/questions/2189452/when-to-use-margin-vs-padding-in-css/9183818#9183818) - This helped me organize better the margin of the elements, I did not know the collapse behavior of margin, really cool.
+- [Javascript Form Validation](https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/) - This helped me go through the form validation.
+- [Disable HTML validation](https://stackoverflow.com/questions/3090369/disable-validation-of-html5-form-elements) - Useful Stackoverflow question.
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website - [Miguel Zapata](https://www.miguezaga.online)
+- Frontend Mentor - [@miguelzaga](https://www.frontendmentor.io/profile/miguelzaga)
